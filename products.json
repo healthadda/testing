@@ -2,54 +2,63 @@
     {
         "id": 1,
         "name":" Groundnut Oil",
+		"mrpprice":" 350/Litre",
         "price": 320,
         "image": "image/1.jpg"
     },
     {
         "id": 2,
         "name":" Coconut Oil 500ml",
+		"mrpprice":" 235/500ml",
         "price": 205,
         "image": "image/2.jpg"
     },
     {
         "id": 3,
         "name":" Almond Oil 100ml",
+		"mrpprice":" 310/100ml",
         "price": 280,
         "image": "image/3.jpg"
     },
     {
         "id": 4,
         "name":" Safflower Oil",
+		"mrpprice":" 380/Litre",
         "price": 350,
         "image": "image/4.jpg"
     },
     {
         "id": 5,
         "name":" Sunflower Oil",
+		"mrpprice":" 430/Litre",
         "price": 400,
         "image": "image/5.jpg"
     },
     {
         "id": 6,
         "name":" White Sesame Oil",
+		"mrpprice":" 500/Litre",
         "price": 470,
         "image": "image/6.jpg"
     },
     {
         "id": 7,
         "name":" Black Sesame Oil",
+		"mrpprice":" 460/Litre",
         "price": 430,
         "image": "image/7.jpg"
     },
     {
         "id": 8,
         "name":" Flax Seed Oil",
+		"mrpprice":" 630/Litre",
         "price": 600,
         "image": "image/8.jpg"
     },
     {
         "id": 9,
         "name":" Kalonji Oil 100ml",
+		"mrpprice":" 240/100ml",
         "price": 210,
         "image": "image/9.jpg"
     }

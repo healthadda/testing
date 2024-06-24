@@ -25,7 +25,7 @@ const addDataToHTML = () => {
             newProduct.innerHTML = `
 			    <img src="${product.image}" alt="">
                 <h2>${product.name}</h2>
-                <div class="price">$${product.price}</div>
+				<div class="price">₹${product.mrpprice}<br/>₹${product.price} Promo Price</div>
                 <button class="addCart">
 				    Add To Cart
 				</button>
