@@ -85,11 +85,11 @@ const addCartToHTML = () => {
                 ${info.name}
                 </div>
                 <div class="totalPrice">
-				    $${info.price * item.quantity}</div>
+				    ₹${info.price * item.quantity}</div>
                 <div class="quantity">
-                    <span class="minus"><</span>
+                    <span class="minus">-</span>
                     <span>${item.quantity}</span>
-                    <span class="plus">></span>
+                    <span class="plus">+</span>
                 </div>
             `;
         })
