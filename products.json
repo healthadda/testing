@@ -1,51 +1,56 @@
 [
     {
         "id": 1,
-        "name":" LD01 LOUNGE CHAIR",
-        "price": 200,
-        "image": "image/1.png"
+        "name":" Groundnut Oil",
+        "price": 320,
+        "image": "image/1.jpg"
     },
     {
         "id": 2,
-        "name":" LD02 LOUNGE CHAIR",
-        "price": 250,
-        "image": "image/2.png"
+        "name":" Coconut Oil 500ml",
+        "price": 205,
+        "image": "image/2.jpg"
     },
     {
         "id": 3,
-        "name":" LD03 LOUNGE CHAIR",
-        "price": 290,
-        "image": "image/3.png"
+        "name":" Almond Oil 100ml",
+        "price": 280,
+        "image": "image/3.jpg"
     },
     {
         "id": 4,
-        "name":" LD04 LOUNGE CHAIR",
-        "price": 200,
-        "image": "image/4.png"
+        "name":" Safflower Oil",
+        "price": 350,
+        "image": "image/4.jpg"
     },
     {
         "id": 5,
-        "name":" LD05 LOUNGE CHAIR",
-        "price": 300,
-        "image": "image/5.png"
+        "name":" Sunflower Oil",
+        "price": 400,
+        "image": "image/5.jpg"
     },
     {
         "id": 6,
-        "name":" LD06 LOUNGE CHAIR",
-        "price": 200,
-        "image": "image/6.png"
+        "name":" White Sesame Oil",
+        "price": 470,
+        "image": "image/6.jpg"
     },
     {
         "id": 7,
-        "name":" LD07 LOUNGE CHAIR",
-        "price": 200,
-        "image": "image/7.png"
+        "name":" Black Sesame Oil",
+        "price": 430,
+        "image": "image/7.jpg"
     },
     {
         "id": 8,
-        "name":" LD08 LOUNGE CHAIR",
-        "price": 200,
-        "image": "image/8.png"
+        "name":" Flax Seed Oil",
+        "price": 600,
+        "image": "image/8.jpg"
+    },
+    {
+        "id": 9,
+        "name":" Kalonji Oil 100ml",
+        "price": 210,
+        "image": "image/9.jpg"
     }
-
 ]
