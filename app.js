@@ -90,7 +90,7 @@ const addCartToHTML = () => {
                     <span class="plus">+</span>
                 </div>
             `;
-			let order_msg += `${info.name}  ${item.price}x${item.quantity}=₹${info.price * item.quantity}`;
+			let order_msg = `${info.name}  ${item.price}x${item.quantity}=₹${info.price * item.quantity}`;
         })
     }
     iconCartSpan.innerText = totalQuantity;
