@@ -128,6 +128,15 @@ const changeQuantity = (product_id, type) => {
     addCartToHTML();
 }
 
+
+function send_handle() {
+  const num = "917093603760";
+  const msg = "I want to order xxx, please deliver at yyy";
+  const name = "Ram";
+  const win = window.open(`https://wa.me/${num}?text=Hello%20${name},%0a${msg}`, '_blank');
+  // win.focus();
+}
+
 const initApp = () => {
     // get data product
     fetch('products.json')
