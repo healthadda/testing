@@ -90,6 +90,8 @@ const addCartToHTML = () => {
                     <span class="plus">+</span>
                 </div>
             `;
+			let order_msg = `${info.name}  ${item.price}x${item.quantity}=₹${info.price * item.quantity}`;
+			order_msg_full += order_msg +"\r\n\r\n";
         })
     }
     iconCartSpan.innerText = totalQuantity;
@@ -130,12 +132,11 @@ const changeQuantity = (product_id, type) => {
 
 
 function send_handle() {
-  const num = "917093603760";
-  const msg = "I want to order xxx, please deliver at yyy";
-  const name = "Ram";
-  var whatsappMessage= "My title"+"\r\n\r\n"+"My description and link"
-  whatsappMessage = window.encodeURIComponent(whatsappMessage)
-  const win = window.open(`https://wa.me/${num}?text=Hello%20${whatsappMessage},%0a%0a%0a%0a${msg}`, '_blank');
+  let waMessage =  "Hi!! Health Adda Oils,"+"\r\n\r\n"
+                  +"Below is my order details."+"\r\n\r\n"
+				  + order_msg_full
+  waMessage = window.encodeURIComponent(waMessage)
+  const win = window.open(`https://wa.me/917093603760?text=${waMessage}`, '_blank');
   // win.focus();
 }
 
