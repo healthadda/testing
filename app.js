@@ -133,7 +133,9 @@ function send_handle() {
   const num = "917093603760";
   const msg = "I want to order xxx, please deliver at yyy";
   const name = "Ram";
-  const win = window.open(`https://wa.me/${num}?text=Hello%20${name},%0a${msg}`, '_blank');
+  var whatsappMessage= "My title"+"\r\n\r\n"+"My description and link"
+  whatsappMessage = window.encodeURIComponent(whatsappMessage)
+  const win = window.open(`https://wa.me/${num}?text=Hello%20${whatsappMessage},%0a%0a%0a%0a${msg}`, '_blank');
   // win.focus();
 }
 
