@@ -70,3 +70,25 @@
 				    Add To Cart
 				</button>
 			</div>
+.
+
+
+				<div class="image">
+					<img src="image/1.jpg" alt="">
+				</div>
+				<div class="name">
+					TEST
+				</div>
+				<div class="totalPrice">
+					₹99
+				</div>
+				<div class="quantity">
+					<span class="minus">-</span> 
+					<span>1</span>
+					<span class="plus">+</span>
+				</div>
+.
+
+
+
+
