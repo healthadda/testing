@@ -90,8 +90,7 @@ const addCartToHTML = () => {
                     <span class="plus">+</span>
                 </div>
             `;
-			let order_msg = `${info.name}  ${item.price}x${item.quantity}=₹${info.price * item.quantity}`;
-			order_msg_full += order_msg +"\r\n\r\n";
+			let order_msg += `${info.name}  ${item.price}x${item.quantity}=₹${info.price * item.quantity}`;
         })
     }
     iconCartSpan.innerText = totalQuantity;
@@ -134,7 +133,7 @@ const changeQuantity = (product_id, type) => {
 function send_handle() {
   let waMessage =  "Hi!! Health Adda Oils,"+"\r\n\r\n"
                   +"Below is my order details."+"\r\n\r\n"
-				  + order_msg_full
+				  + order_msg
   waMessage = window.encodeURIComponent(waMessage)
   const win = window.open(`https://wa.me/917093603760?text=${waMessage}`, '_blank');
   // win.focus();
