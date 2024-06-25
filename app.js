@@ -82,7 +82,7 @@ const addCartToHTML = () => {
                     <img src="${info.image}">
                 </div>
                 <div class="name">
-                ${info.name}
+                    ${info.name}
                 </div>
                 <div class="totalPrice">
 				    ₹${info.price * item.quantity}</div>

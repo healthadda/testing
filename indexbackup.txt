@@ -32,6 +32,70 @@
 				    Add To Cart
 				</button>
 			</div>
+			<div class="item">
+			    <img src="image/2.jpg" alt="">
+				<h2>Coconut Oil 500ml</h2>
+				<div class="Price">₹235/500ml<br/>₹205 Promo Price</div>
+				<button class="addCart">
+				    Add To Cart
+				</button>
+			</div>
+			<div class="item">
+			    <img src="image/3.jpg" alt="">
+				<h2>Almond Oil 100ml</h2>
+				<div class="Price">₹310/100ml<br/>₹280 Promo Price</div>
+				<button class="addCart">
+				    Add To Cart
+				</button>
+			</div>
+			<div class="item">
+			    <img src="image/4.jpg" alt="">
+				<h2>Safflower Oil</h2>
+				<div class="Price">₹380/Litre<br/>₹350 Promo Price</div>
+				<button class="addCart">
+				    Add To Cart
+				</button>
+			</div>
+		    <div class="item">
+			    <img src="image/5.jpg" alt="">
+				<h2>Sunflower Oil</h2>
+				<div class="Price">₹430/Litre<br/>₹400 Promo Price</div>
+				<button class="addCart">
+				    Add To Cart
+				</button>
+			</div>
+			<div class="item">
+			    <img src="image/6.jpg" alt="">
+				<h2>White Sesame Oil</h2>
+				<div class="Price">₹500/Litre<br/>₹470 Promo Price</div>
+				<button class="addCart">
+				    Add To Cart
+				</button>
+			</div>
+			<div class="item">
+			    <img src="image/7.jpg" alt="">
+				<h2>Black Sesame Oil</h2>
+				<div class="Price">₹460/Litre<br/>₹430 Promo Price</div>
+				<button class="addCart">
+				    Add To Cart
+				</button>
+			</div>
+		    <div class="item">
+			    <img src="image/8.jpg" alt="">
+				<h2>Flax Seed Oil</h2>
+				<div class="Price">₹630/Litre<br/>₹600 Promo Price</div>
+				<button class="addCart">
+				    Add To Cart
+				</button>
+			</div>
+		    <div class="item">
+			    <img src="image/9.jpg" alt="">
+				<h2>Kalonji Oil 100ml</h2>
+				<div class="Price">₹240/100ml<br/>₹210 Promo Price</div>
+				<button class="addCart">
+				    Add To Cart
+				</button>
+			</div>
 		</div>
     </div>
 
