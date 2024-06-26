@@ -9,7 +9,7 @@ let products = [];
 let cart = [];
 let getCartItems = [];
 let grandTotal = 0;
-let wa_msg = ". Hello! Health Adda! I would like to place an order for the following items:\r\n\r\n"
+let wa_msg = "Hello! Health Adda!\r\n\r\nI would like to place an order for the following items:\r\n\r\n"
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
