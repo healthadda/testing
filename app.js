@@ -6,8 +6,8 @@ let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
 let listProducts = [];
 let products = [];
-let cart = [];
-let getCartItems = [];
+var cart = [];
+var getCartItems = [];
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -155,8 +155,8 @@ function send_handle() {
   wa_msg = window.encodeURIComponent(wa_msg)
   const win = window.open(`https://wa.me/917093603760?text=${wa_msg}`, '_blank');
   localStorage.removeItem('cart');
-  let cart = [];
-  let getCartItems = [];
+  var cart = [];
+  var getCartItems = [];
 }
 
 const initApp = () => {
