@@ -7,6 +7,7 @@ let iconCartSpan = document.querySelector('.icon-cart span');
 let listProducts = [];
 let products = [];
 let cart = [];
+let getCartItems = [];
 let wa_msg = "Hi, Health Adda Oils,\r\n\r\n I want to order the below items:\r\n\r\n"
 
 iconCart.addEventListener('click', () => {
@@ -91,7 +92,6 @@ const addCartToHTML = () => {
                     <span class="plus">+</span>
                 </div>
             `;
-			wa_msg += `${info.name}\r\n     ₹${info.price} x ${item.quantity} = ₹${info.price * item.quantity}\r\n`
         })
     }
     iconCartSpan.innerText = totalQuantity;
@@ -130,7 +130,24 @@ const changeQuantity = (product_id, type) => {
     addCartToHTML();
 }
 
+function getCart() {
+    if(localStorage.getItem('cart')){
+        getCartItems = JSON.parse(localStorage.getItem('cart'));
+    }
+	if(getCartItems.length > 0){
+        getCartItems.forEach(item => {
+            let positionProduct2 = listProducts.findIndex((value) => value.id == item.product_id);
+            let info2 = listProducts[positionProduct2];
+			wa_msg += `${info2.name}\r\n                    ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
+        })
+    } else {
+		wa_msg += `Your Cart is Empty!! Please add some products before clicking ORDER. Thank you.\r\n`;
+	}
+	return wa_msg;
+}
+
 function send_handle() {
+  wa_msg = getCart()
   wa_msg = window.encodeURIComponent(wa_msg)
   const win = window.open(`https://wa.me/917093603760?text=${wa_msg}`, '_blank');
 }
