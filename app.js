@@ -141,7 +141,7 @@ function getCart() {
 			wa_msg += `${info2.name}\r\n                    ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
         })
     } else {
-		wa_msg += `Your Cart is Empty!! Please add some products before clicking ORDER. Thank you.\r\n`;
+		wa_msg = `Dear Customer, Your Cart is Empty!! Please add some products before clicking ORDER. Thank you.\r\n`;
 	}
 	return wa_msg;
 }
