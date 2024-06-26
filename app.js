@@ -154,6 +154,7 @@ function send_handle() {
   wa_msg = getCart()
   wa_msg = window.encodeURIComponent(wa_msg)
   const win = window.open(`https://wa.me/917093603760?text=${wa_msg}`, '_blank');
+  localStorage.removeItem('cart');
 }
 
 const initApp = () => {
