@@ -91,7 +91,7 @@ const addCartToHTML = () => {
                     <span class="plus">+</span>
                 </div>
             `;
-			wa_msg += `${info.name}  ${info.price}x${item.quantity}=₹${info.price * item.quantity}\r\n`
+			wa_msg += `${info.name}\r\n     ₹${info.price} x ${item.quantity} = ₹${info.price * item.quantity}\r\n`
         })
     }
     iconCartSpan.innerText = totalQuantity;
@@ -130,11 +130,9 @@ const changeQuantity = (product_id, type) => {
     addCartToHTML();
 }
 
-
 function send_handle() {
   wa_msg = window.encodeURIComponent(wa_msg)
   const win = window.open(`https://wa.me/917093603760?text=${wa_msg}`, '_blank');
-  // win.focus();
 }
 
 const initApp = () => {
