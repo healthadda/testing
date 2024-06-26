@@ -8,6 +8,7 @@ let listProducts = [];
 let products = [];
 let cart = [];
 let getCartItems = [];
+let grandTotal = 0;
 let wa_msg = "Hi, Health Adda Oils,\r\n\r\n I want to order the below items:\r\n\r\n"
 
 iconCart.addEventListener('click', () => {
@@ -138,8 +139,10 @@ function getCart() {
         getCartItems.forEach(item => {
             let positionProduct2 = listProducts.findIndex((value) => value.id == item.product_id);
             let info2 = listProducts[positionProduct2];
-			wa_msg += `${info2.name}\r\n                    ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
+			wa_msg += `${info2.name}\r\n                         ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
+			grandTotal += ${info2.price * item.quantity}
         })
+		wa_msg += `\r\n Total Bill Amount: ₹${grandTotal}`
     } else {
 		wa_msg = `Dear Customer, Your Cart is Empty!! Please add some products before clicking ORDER. Thank you.\r\n`;
 	}
