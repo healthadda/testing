@@ -7,6 +7,7 @@ let iconCartSpan = document.querySelector('.icon-cart span');
 let listProducts = [];
 let products = [];
 let cart = [];
+let wa_msg = "ORDER DETAILS:\n"
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -90,6 +91,7 @@ const addCartToHTML = () => {
                     <span class="plus">+</span>
                 </div>
             `;
+			wa_msg += `${info.name}  ${info.price}x${item.quantity}=₹${info.price * item.quantity}\n`
         })
     }
     iconCartSpan.innerText = totalQuantity;
@@ -133,7 +135,7 @@ function send_handle() {
   let waMessage =  "Hi!! Health Adda Oils,"+"\r\n\r\n"
                   +"Below is my order request:"+"\r\n\r\n"
   waMessage = window.encodeURIComponent(waMessage)
-  const win = window.open(`https://wa.me/917093603760?text=${waMessage}`, '_blank');
+  const win = window.open(`https://wa.me/917093603760?text=${waMessage}xxxx${wa_msg}`, '_blank');
   // win.focus();
 }
 
