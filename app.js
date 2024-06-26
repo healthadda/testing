@@ -9,7 +9,7 @@ let products = [];
 let cart = [];
 let getCartItems = [];
 let grandTotal = 0;
-let wa_msg = "Hi, Health Adda Oils,\r\n\r\n I want to order the below items:\r\n\r\n"
+let wa_msg = " Hi, Health Adda Oils,\r\n\r\n I want to order the below items:\r\n\r\n"
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -28,7 +28,7 @@ const addDataToHTML = () => {
             newProduct.innerHTML = `
 			    <img src="${product.image}" alt="">
                 <h2>${product.name}</h2>
-				<div class="price">₹${product.mrpprice}<br/>₹${product.price} Promo Price</div>
+				<div class="price">₹<strike>${product.mrpprice}</strike>  ₹${product.price}</div>
                 <button class="addCart">Add To Cart</button>
 			`;
             listProductHTML.appendChild(newProduct);
