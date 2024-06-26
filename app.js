@@ -7,7 +7,7 @@ let iconCartSpan = document.querySelector('.icon-cart span');
 let listProducts = [];
 let products = [];
 let cart = [];
-let wa_msg = "ORDER DETAILS:\n"
+let wa_msg = "Hi, Health Adda Oils,\r\n\r\n I want to order the below items:\r\n\r\n"
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -91,7 +91,7 @@ const addCartToHTML = () => {
                     <span class="plus">+</span>
                 </div>
             `;
-			wa_msg += `${info.name}  ${info.price}x${item.quantity}=₹${info.price * item.quantity}\n`
+			wa_msg += `${info.name}  ${info.price}x${item.quantity}=₹${info.price * item.quantity}\r\n`
         })
     }
     iconCartSpan.innerText = totalQuantity;
@@ -132,10 +132,8 @@ const changeQuantity = (product_id, type) => {
 
 
 function send_handle() {
-  let waMessage =  "Hi!! Health Adda Oils,"+"\r\n\r\n"
-                  +"Below is my order request:"+"\r\n\r\n"
-  waMessage = window.encodeURIComponent(waMessage)
-  const win = window.open(`https://wa.me/917093603760?text=${waMessage}xxxx${wa_msg}`, '_blank');
+  wa_msg = window.encodeURIComponent(wa_msg)
+  const win = window.open(`https://wa.me/917093603760?text=${wa_msg}`, '_blank');
   // win.focus();
 }
 
