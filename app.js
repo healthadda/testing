@@ -9,7 +9,7 @@ let products = [];
 let cart = [];
 let getCartItems = [];
 let grandTotal = 0;
-let wa_msg = " Hi, Health Adda Oils,\r\n\r\n I want to order the below items:\r\n\r\n"
+let wa_msg = ". Hello! Health Adda! I would like to place an order for the following items:\r\n\r\n"
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -142,7 +142,8 @@ function getCart() {
 			wa_msg += `${info2.name}\r\n                         ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
   			grandTotal += (info2.price * item.quantity);
         })
-		wa_msg += `\r\n Total Bill Amount: ₹${grandTotal}`;
+		wa_msg += `\r\n Total Bill Amount: ₹${grandTotal}\r\n\r\n`;
+		wa_msg += `Please deliver at the below address.\r\n\r\n <<Please send deliver location after this message>>`;
     } else {
 		wa_msg = `Dear Customer, Your Cart is Empty!! Please add some products before clicking ORDER. Thank you.\r\n`;
 	}
