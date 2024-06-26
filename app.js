@@ -8,8 +8,6 @@ let listProducts = [];
 let products = [];
 let cart = [];
 let getCartItems = [];
-let grandTotal = 0;
-let wa_msg = "Hello! Health Adda!\r\n\r\nI would like to place an order for the following items:\r\n\r\n"
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -136,6 +134,8 @@ function getCart() {
         getCartItems = JSON.parse(localStorage.getItem('cart'));
     }
 	if(getCartItems.length > 0){
+		var wa_msg = "Hello! Health Adda!\r\n\r\nI would like to place an order for the following items:\r\n\r\n"
+		var grandTotal = 0;
         getCartItems.forEach(item => {
             let positionProduct2 = listProducts.findIndex((value) => value.id == item.product_id);
             let info2 = listProducts[positionProduct2];
@@ -154,7 +154,6 @@ function send_handle() {
   wa_msg = getCart()
   wa_msg = window.encodeURIComponent(wa_msg)
   const win = window.open(`https://wa.me/917093603760?text=${wa_msg}`, '_blank');
-  wa_msg = ` `
 }
 
 const initApp = () => {
