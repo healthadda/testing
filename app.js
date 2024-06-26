@@ -140,7 +140,7 @@ function getCart() {
             let positionProduct2 = listProducts.findIndex((value) => value.id == item.product_id);
             let info2 = listProducts[positionProduct2];
 			wa_msg += `${info2.name}  ₹${info2.price} x ${item.quantity} \r\n                               = ₹${info2.price * item.quantity}\r\n`;
-//			grandTotal = grandTotal + (${info2.price} * ${item.quantity})
+  			grandTotal += (info2.price * item.quantity);
         })
 		wa_msg += `\r\n Total Bill Amount: ₹${grandTotal}`
     } else {
