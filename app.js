@@ -139,11 +139,11 @@ function getCart() {
         getCartItems.forEach(item => {
             let positionProduct2 = listProducts.findIndex((value) => value.id == item.product_id);
             let info2 = listProducts[positionProduct2];
-			wa_msg += `${info2.name}\r\n                         ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
+			wa_msg += `${info2.name}\r\n                                ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
   			grandTotal += (info2.price * item.quantity);
         })
 		wa_msg += `\r\n Total Bill Amount: ₹${grandTotal}\r\n\r\n`;
-		wa_msg += `Please deliver at the below address.\r\n\r\n <<Please send deliver location after this message>>`;
+		wa_msg += `Please deliver at the below address.\r\n\r\n <share location after this message>`;
     } else {
 		wa_msg = `Dear Customer, Your Cart is Empty!! Please add some products before clicking ORDER. Thank you.\r\n`;
 	}
