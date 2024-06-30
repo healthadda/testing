@@ -145,6 +145,23 @@ body.showCart .container{
 .listCart::-webkit-scrollbar{
     width: 0;
 }
+#popup {
+  display: none; /* Initially hide the popup */
+  position: fixed; /* Keep it positioned on scroll */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset for centering */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  opacity: 0; /* Initially transparent */
+  transition: opacity 1s ease-in-out; /* Fade animation */
+}
+#popup.show {
+  display: block;
+  opacity: 1; /* Make it fully visible on show */
+}
 @media only screen and (max-width: 992px) {
     .listProduct{
         grid-template-columns: repeat(3, 1fr);

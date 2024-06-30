@@ -8,6 +8,9 @@ let listProducts = [];
 let products = [];
 var cart = [];
 var getCartItems = [];
+const openButton = document.getElementById("open-popup");
+const popup = document.getElementById("popup");
+const closeButton = document.getElementById("close-popup");
 
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
@@ -28,17 +31,29 @@ const addDataToHTML = () => {
                 <h2>${product.name}</h2>
 				<div class="price">₹<strike>${product.mrpprice}</strike>  ₹${product.price}</div>
                 <button class="addCart">Add To Cart</button>
+                <div id="popup">
+                    <h5>Added</h5>
+                    <button id="close-popup">Close</button>
+                </div>
 			`;
             listProductHTML.appendChild(newProduct);
         })
     }
 }
 
+
+closeButton.addEventListener("click", () => {
+  popup.classList.remove("show"); // Remove "show" class to hide popup
+});
+
+
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if(positionClick.classList.contains('addCart')){
         let id_product = positionClick.parentElement.dataset.id;
         addToCart(id_product);
+		popup.classList.add("show"); // Add "show" class to display popup
+        setTimeout(() => {popup.classList.remove("show");}, 600);
     }
 })
 
@@ -139,11 +154,11 @@ function getCart() {
         getCartItems.forEach(item => {
             let positionProduct2 = listProducts.findIndex((value) => value.id == item.product_id);
             let info2 = listProducts[positionProduct2];
-			wa_msg += `${info2.name}\r\n                                    ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
+			wa_msg += `${info2.name}\r\n                                 ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
   			grandTotal += (info2.price * item.quantity);
         })
 		wa_msg += `\r\n *Total Bill Amount: ₹${grandTotal}*\r\n\r\n`;
-		wa_msg += `I'll make the payment to this same number through GPay/PhonePe (or any UPI app) after I receive the delivery.\r\n\r\nI'll share the delivery address/location in the next message.`;
+		wa_msg += `I'll make the payment of ₹${grandTotal} to this same number (7093603760) through GPay/PhonePe or any UPI app or cash after I receive the delivery.\r\n\r\nI'll share the delivery address/location in the next message.`;
     } else {
 		wa_msg = `Dear Customer, Your Cart is Empty!! Please add some products before clicking ORDER. Thank you.\r\n`;
 	}
