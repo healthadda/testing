@@ -142,8 +142,8 @@ function getCart() {
 			wa_msg += `${info2.name}\r\n                                    ₹${info2.price} x ${item.quantity} = ₹${info2.price * item.quantity}\r\n`;
   			grandTotal += (info2.price * item.quantity);
         })
-		wa_msg += `\r\n-----------------------------------\r\n`;
-		wa_msg += `\r\n *Total Bill Amount: ₹${grandTotal}*\r\n`;
+		wa_msg += `\r\n-----------------------------------\n`;
+		wa_msg += `\r\n *Total Bill Amount: ₹${grandTotal}*\n`;
 		wa_msg += `\r\n-----------------------------------\r\n\r\n`;
 		wa_msg += `I'll make the payment to this same number through GPay/PhonePe (or any UPI app) after I receive the delivery.\r\n\r\nI'll share the delivery address/location in the next message.`;
     } else {
