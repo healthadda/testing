@@ -143,8 +143,8 @@ function getCart() {
   			grandTotal += (info2.price * item.quantity);
         })
 		wa_msg += `\r\n-----------------------------------\r\n`;
-		wa_msg += `\r\n *Total Bill Amount: ₹${grandTotal}*\r\n\r\n`;
-		wa_msg += `\r\n-----------------------------------\r\n`;
+		wa_msg += `\r\n *Total Bill Amount: ₹${grandTotal}*\r\n`;
+		wa_msg += `\r\n-----------------------------------\r\n\r\n`;
 		wa_msg += `I'll make the payment to this same number through GPay/PhonePe (or any UPI app) after I receive the delivery.\r\n\r\nI'll share the delivery address/location in the next message.`;
     } else {
 		wa_msg = `Dear Customer, Your Cart is Empty!! Please add some products before clicking ORDER. Thank you.\r\n`;
